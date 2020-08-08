@@ -1,12 +1,10 @@
-*  {
-    width: 100%;
-}
 
 :root{
     --main-color: #cc3300;
     --secondary-color: #49dbee;
-    --accent-color:#565656;
+    --accent-color:#292929;
     --white-color: #ffffff;
+    --primary-font: 'Questrial', sans-serif;
 }
 nav, .bg-light {
     z-index: 999;
@@ -19,6 +17,8 @@ nav, .bg-light {
     width: 100%;
     text-align: center;
     padding: 7px 20px;
+    font-size: 30px;
+    font-family: var(--primary-font);
 }
 .nav-link:hover {
     background-color: var(--secondary-color);
@@ -40,11 +40,105 @@ h1 {
     margin-left: 30%;
     grid-row: 2;
     font-size: 90px;
+    color: var(--accent-color);
+    font-family: var(--primary-font);
+    
 }
-#letter {
-    color: white;
+span {
+    color: var(--secondary-color);
+
+}
+#about-me {
+    margin:10%;
+    display: flex;
+    flex-direction: row;
+
+}
+#portrait {
+    width: 80%;
+    filter: drop-shadow(5px 20px 20px rgba(0,0,0,0.5));
+    z-index: 35;
+    border: 4px solid var(--main-color);
+    margin-left: 8%;
+}
+.flex-child{
+    flex:1;
+
+}
+.square {
+    height: 405px;
+    width: 405px;
+    border: var(--secondary-color) 4px solid;
+    z-index: 3;
+    margin-top: -85%;
+    margin-left: 20px;
+}
+.about-body h3 {
+    text-align: right;
+    font-size: 45px;
+    padding: 15px;
+    color: var(--accent-color);
 }
 
-img {
-    width: 20%;
+.about-body p {
+    line-height: 30px;
+}
+
+#my-projects {
+    padding: 3%;
+}
+#my-projects h3 {
+    margin-left: 5%;
+    color: var(--accent-color);
+    font-size: 45px;
+    padding: 15px;
+}
+.project-grid {
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    display: grid;
+    margin: 30px 70px;
+
+}
+.grid-item {
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    z-index: 50;
+}
+.grid-item h5,.grid-item p {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+
+}
+.grid-item:nth-child(even):hover {
+    border: 7px solid var(--main-color);
+}
+.grid-item:nth-child(odd):hover {
+    border: 7px solid var(--secondary-color)
+}
+.item-one {
+    background: url(../images/portrait.JPG);
+    background-size: cover;
+    grid-column: span 2;
+}
+.item-two {
+    background: url(../images/portrait.JPG);
+    background-size: cover;
+}
+.item-three {
+    background: url(../images/portrait.JPG);
+    background-size: cover;
+}
+.item-four {
+    background: url(../images/portrait.JPG);
+    background-size: cover;
+}
+.item-five {
+    background: url(../images/portrait.JPG);
+    background-size: cover;
 }

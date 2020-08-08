@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <!--override Bootstrap Stylesheet-->
                 <link rel="stylesheet" href='./assets/css/style.css'>
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 
     </head>
     <body>
@@ -25,7 +27,7 @@
               <a class="nav-link" href="#about-me">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Work</a>
+              <a class="nav-link" href="#my-projects">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -36,16 +38,42 @@
       <!--Hero Section-->
       <section class='hero'>
           <div class='second-color'></div>
-            <h1>Hello, my <br/>name is Bry<span id='letter'>ce.</span></h1>
+            <h1>Hello, my name is Bryce<span>.</span></h1>
       </section>
       <!--About Me Section-->
       <section id='about-me'>
-          <div>
-              <!-- <img src='./assets/images/portrait.JPG' alt='picture of bryce drawe'/> -->
+          <div class='about-image flex-child'>
+               <img src='./assets/images/portrait.JPG' alt='picture of bryce drawe' id='portrait'/>
+               <div class='square'></div>
+          </div>
+          <div class='about-body flex-child'>
+              <h3>About Me.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fugiat iure omnis quae pariatur voluptate, libero eum, in deleniti porro maxime obcaecati, quos nam laborum debitis rem laboriosam atque autem?
+             </p>
           </div>
       </section>
       <!--Work Section-->
-      <section></section>
+      <section id='my-projects'>
+          <h3>Projects</h3>
+          <div class='project-grid'>
+              <div class="grid-item item-one">
+                  <h5>Run Buddy</h5>
+              </div>
+              <div class="grid-item item-two">
+                  <h5>Avengers Fan Page</h5>
+              </div>
+              <div class="grid-item item-three">
+                  <h5>Random Number Generator</h5>
+              </div>
+              <div class="grid-item item-four">
+                  <h5>SUSF</h5>
+              </div>
+              <div class="grid-item item-five">
+                  <h5>Lee Family Music</h5>
+              </div>
+          </div>
+      </section>
       <!---Contact Me Section-->
       <section></section>
       <!--Footer-->
