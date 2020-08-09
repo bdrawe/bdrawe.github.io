@@ -126,24 +126,24 @@ span {
     border: 7px solid var(--secondary-color)
 }
 .item-one {
-    background: url(../images/portrait.JPG);
+    background: url(../images/hero-bg.jpg);
     background-size: cover;
     grid-column: span 2;
 }
 .item-two {
-    background: url(../images/portrait.JPG);
+    background: var(--secondary-color);
     background-size: cover;
 }
 .item-three {
-    background: url(../images/portrait.JPG);
+    background: url(../images/lee-logo.png);
     background-size: cover;
 }
 .item-four {
-    background: url(../images/portrait.JPG);
+    background: url(../images/numbers.jpeg);
     background-size: cover;
 }
 .item-five {
-    background: url(../images/portrait.JPG);
+    background: url(../images/sbsu.png);
     background-size: cover;
 }
 footer {
@@ -152,6 +152,8 @@ footer {
     height: 200px;
     display: flex;
     color: var(--white-color);
+    justify-content: center;
+    align-items: center;
 }
 footer h3 {
     padding: 5%;
@@ -161,7 +163,8 @@ footer h3 {
 .contact-item {
     text-align: center;
     padding:5%;
-    font-size: 20px
+    font-size: 20px;
+    
 }
 
 .contact-item a {
@@ -171,6 +174,11 @@ footer h3 {
 
 .contact-item a:hover {
     color: var(--secondary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
 /*Media Queries*/
@@ -199,6 +207,13 @@ footer h3 {
     h1 {
         font-size: 60px;
         margin-left: 20%;
+    }
+    .contact-link{
+        display: none;
+        
+    }
+    .contact-item{
+        font-size: 30px;
     }
 }
 
@@ -248,6 +263,7 @@ footer h3 {
     }
     .contact-item {
         font-size: 15px;
+        padding: 3px;
     }
     .contact-item i {
         font-size: 25px;
@@ -256,6 +272,5 @@ footer h3 {
     footer {
         width: 100%;
     }
-
     
 }
