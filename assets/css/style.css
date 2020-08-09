@@ -250,8 +250,8 @@ a {
         padding: 0;
     }
     .project-grid {
-        grid-template-rows: repeat(3, 300px);
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-flow: column;
     }
     .grid-item h5,.grid-item p {
         background-color: var(--secondary-color);
@@ -260,6 +260,14 @@ a {
         font-size: 20px;
         font-family: var(--primary-font);
     
+    }
+    .grid-item {
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        margin-left: -40px; 
+        padding: 50px;
+
     }
     .contact-item {
         font-size: 15px;
