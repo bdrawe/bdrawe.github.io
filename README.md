@@ -6,4 +6,4 @@
 - Bootstrap
 
 ### To visit my portfolio click on the link below!
-[my portfolio](https://bdrawe.github.io/)
+[Click Me!](https://bdrawe.github.io/)
