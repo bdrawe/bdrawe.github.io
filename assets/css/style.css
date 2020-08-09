@@ -4,7 +4,7 @@
     --secondary-color: #49dbee;
     --accent-color:#292929;
     --white-color: #ffffff;
-    --primary-font: 'Questrial', sans-serif;
+    --primary-font: 'IBM Plex Sans', sans-serif;
 }
 nav, .bg-light {
     z-index: 999;
@@ -52,6 +52,7 @@ span {
     margin:10%;
     display: flex;
     flex-direction: row;
+    font-family: var(--primary-font);
 
 }
 #portrait {
@@ -78,6 +79,7 @@ span {
     font-size: 45px;
     padding: 15px;
     color: var(--accent-color);
+    font-family: var(--primary-font);
 }
 
 .about-body p {
@@ -112,11 +114,13 @@ span {
     background-color: var(--accent-color);
     color: white;
     padding: 15px;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: var(--primary-font);
 
 }
 .grid-item:nth-child(even):hover {
     border: 7px solid var(--main-color);
+    
 }
 .grid-item:nth-child(odd):hover {
     border: 7px solid var(--secondary-color)
@@ -141,4 +145,114 @@ span {
 .item-five {
     background: url(../images/portrait.JPG);
     background-size: cover;
+}
+footer {
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    color: var(--white-color);
+}
+footer h3 {
+    padding: 5%;
+    color: var(--white-color);
+    font-size: 45px;
+}
+.contact-item {
+    text-align: center;
+    padding:5%;
+    font-size: 20px
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--secondary-color);
+}
+
+/*Media Queries*/
+@media screen and (max-width: 980px){
+    .square {
+        display: none;
+    }
+    #about-image {
+        padding-right: 10px;
+        padding-left: -5px;
+        width: 85%;
+        margin-top: 25px;
+    }
+    .hero {
+        grid-template-rows:repeat(3, 150px);
+    }
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .square {
+        display: none;
+    }
+    h1 {
+        font-size: 60px;
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .square {
+        display: none;
+    }
+    .hero {
+        background-color: var(--main-color);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: block;
+        padding: 50px 0;
+    }
+    h1 {
+        text-align: left;
+        position: relative;
+        color: var(--white-color);
+        display: block;
+        margin-top: -10px;
+        background-color: var(--secondary-color);
+        color: var(--accent-color);
+        padding: 15px;
+    }
+    #about-me {
+        flex-direction: column;
+    }
+    .about-body h3 {
+        text-align: left;
+        margin-top: 40px;
+        padding: 0;
+    }
+    .project-grid {
+        grid-template-rows: repeat(3, 300px);
+        grid-template-columns: 1fr 1fr;
+    }
+    .grid-item h5,.grid-item p {
+        background-color: var(--secondary-color);
+        color: var(--accent-color);
+        padding: 10px;
+        font-size: 20px;
+        font-family: var(--primary-font);
+    
+    }
+    .contact-item {
+        font-size: 15px;
+    }
+    .contact-item i {
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    
 }
