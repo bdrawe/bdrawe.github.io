@@ -131,7 +131,7 @@ span {
     grid-column: span 2;
 }
 .item-two {
-    background: var(--secondary-color);
+    background: url(../images/food.jpg);
     background-size: cover;
 }
 .item-three {
