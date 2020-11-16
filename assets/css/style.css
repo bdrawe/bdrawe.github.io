@@ -144,7 +144,7 @@ span {
     border: 7px solid var(--secondary-color)
 }
 .item-one {
-    background: url(../images/hero-bg.jpg);
+    background: url(../images/ring.jpg);
     background-size: cover;
     grid-column: span 2;
 }
