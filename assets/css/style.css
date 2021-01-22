@@ -199,6 +199,25 @@ a {
     color: var(--secondary-color);
     text-decoration: none;
 }
+.project-description {
+    background-color: var(--main-color);
+    padding: 5px;
+    color: var(--white-color);
+}
+.message-blurb {
+    padding: 20px;
+    text-align: center;
+    color: var(--main-color);
+    border: double 2px var(--accent-color);
+}
+#tech-used {
+    font-size: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 /*Media Queries*/
 @media screen and (max-width: 980px){
