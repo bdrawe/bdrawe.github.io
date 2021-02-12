@@ -24,21 +24,11 @@ nav, .bg-light {
     background-color: var(--secondary-color);
     height: 50%;
 }
-@keyframes fadeIn{
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
+
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3,200px);
-    animation: fadeIn ease 4s ;
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
 
 }
 
@@ -81,14 +71,7 @@ span {
     flex:1;
 
 }
-.square {
-    height: 405px;
-    width: 405px;
-    border: var(--secondary-color) 4px solid;
-    z-index: 3;
-    margin-top: -85%;
-    margin-left: 20px;
-}
+
 .about-body h3 {
     text-align: right;
     font-size: 45px;
@@ -219,7 +202,18 @@ a {
     align-items: center;
 }
 #tech-used i {
-    padding: 60px
+    padding: 20px
+}
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid var(--secondary-color);
+    padding: 10px;
+}
+.skill-items {
+    list-style: none;
+    padding:5px;
 }
 
 /*Media Queries*/
@@ -265,6 +259,9 @@ a {
 }
 
 @media screen and (max-width: 575px){
+    .skills {
+        flex-wrap: wrap;
+    }
     .square {
         display: none;
     }
