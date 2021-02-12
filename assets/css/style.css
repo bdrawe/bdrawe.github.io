@@ -81,14 +81,14 @@ span {
     flex:1;
 
 }
-.square {
+/* .square {
     height: 405px;
     width: 405px;
     border: var(--secondary-color) 4px solid;
     z-index: 3;
     margin-top: -85%;
     margin-left: 20px;
-}
+} */
 .about-body h3 {
     text-align: right;
     font-size: 45px;
@@ -100,7 +100,16 @@ span {
 .about-body p {
     line-height: 30px;
 }
-
+.skills {
+    display: flex;
+    justify-content: space-between;
+    border: solid var(--secondary-color);
+    padding:5px;
+}
+.skills-item {
+    padding: 5px;
+    list-style: none;
+}
 #my-projects {
     padding: 3%;
     animation: fadeIn ease 3s ;
@@ -114,7 +123,7 @@ span {
     padding: 15px;
 }
 .project-grid {
-    grid-template-rows: repeat(2, 300px);
+    grid-template-rows: repeat(3, 300px);
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: dense;
     grid-gap: 10px;
@@ -146,11 +155,12 @@ span {
 .item-one {
     background: url(../images/books.jpg);
     background-size: cover;
-    grid-column: span 2;
+    grid-column: span 3;
 }
 .item-two {
     background: url(../images/budget.jpeg);
     background-size: cover;
+    grid-column: span 2;
 }
 .item-three {
     background: url(../images/note-taking.jpg);
@@ -159,10 +169,12 @@ span {
 .item-four {
     background: url(../images/zoo.jpg);
     background-size: cover;
+    grid-column: span 1;
 }
 .item-five {
     background: url(../images/hero.jpg);
     background-size: cover;
+    grid-column: span 2;
 }
 footer {
     background-color: var(--accent-color);
@@ -219,7 +231,7 @@ a {
     align-items: center;
 }
 #tech-used i {
-    padding: 60px
+    padding: 20px
 }
 
 /*Media Queries*/
@@ -261,6 +273,11 @@ a {
     }
     #tech-used i {
         padding: 15px
+    }
+    .skills {
+        display: flex;
+        align-items: center;
+        flex-wrap:wrap
     }
 }
 
@@ -334,5 +351,10 @@ a {
         width: 100%;
         padding: 0 20px;
     }
-    
+    .skills {
+        display: flex;
+        align-items: center;
+        flex-wrap:wrap
+    }
+  
 }
