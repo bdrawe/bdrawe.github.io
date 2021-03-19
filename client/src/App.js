@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-  <>
-    <NavigationBar fixed="top" />
+    <>
+  <NavigationBar fixed="top" />
     <Footer  fixed="bottom"/>
   </>
   );

@@ -1,0 +1,8 @@
+html,body {
+  height: 100%;  
+}
+.hero-image {
+    filter:  grayscale(45%);
+    margin-top: -25px;
+    z-index: -1;
+}
