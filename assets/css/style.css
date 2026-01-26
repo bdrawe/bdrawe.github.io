@@ -491,6 +491,184 @@ nav.navbar::after {
 }
 
 /* ===========================================
+   WHAT I DO / SERVICES SECTION
+   =========================================== */
+#what-i-do {
+    padding: var(--space-xl) var(--space-md);
+    background: var(--deep-black);
+    position: relative;
+    overflow: hidden;
+}
+
+#what-i-do::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: var(--electric-blue);
+    opacity: 0.08;
+    border-radius: 50%;
+    right: -200px;
+    top: 20%;
+    filter: blur(100px);
+}
+
+#what-i-do::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: var(--neon-pink);
+    opacity: 0.08;
+    border-radius: 50%;
+    left: -150px;
+    bottom: 10%;
+    filter: blur(80px);
+}
+
+.services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.services-header .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Make the last row center the cards */
+.services-grid .service-card:nth-child(4),
+.services-grid .service-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    position: relative;
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-90s);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition-smooth);
+}
+
+.service-card:hover {
+    border-color: var(--neon-pink);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-neon);
+    background: rgba(255, 0, 255, 0.05);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Service Icon */
+.service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 0, 255, 0.1);
+    border: 2px solid var(--neon-pink);
+    border-radius: var(--border-radius-md);
+    margin-bottom: 1.5rem;
+    transition: var(--transition-smooth);
+}
+
+.service-icon i {
+    font-size: 1.75rem;
+    background: var(--gradient-90s);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.service-card:hover .service-icon {
+    background: var(--neon-pink);
+    transform: rotate(-5deg) scale(1.1);
+}
+
+.service-card:hover .service-icon i {
+    background: var(--deep-black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Service Title */
+.service-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pure-white);
+    margin-bottom: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.service-card:hover .service-title {
+    color: var(--electric-blue);
+}
+
+/* Service Description */
+.service-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+/* Service Outcome */
+.service-outcome {
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.outcome-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--lime-green);
+    margin-bottom: 0.5rem;
+}
+
+.outcome-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+/* ===========================================
    TECH ICONS SECTION - Animated Marquee Style
    =========================================== */
 #tech-used {
@@ -996,6 +1174,16 @@ footer h3 .accent {
     .item-five {
         grid-column: span 2;
     }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid .service-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        justify-self: center;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -1021,6 +1209,19 @@ footer h3 .accent {
 
     .about-body p {
         text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .services-grid .service-card:last-child {
+        max-width: 100%;
+    }
+
+    .service-card {
+        padding: 2rem;
     }
 }
 
@@ -1132,6 +1333,31 @@ footer h3 .accent {
     .contact-item a {
         min-width: auto;
         padding: 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-icon i {
+        font-size: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.25rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+
+    .outcome-text {
+        font-size: 0.85rem;
     }
 }
 
