@@ -490,6 +490,61 @@ nav.navbar::after {
     box-shadow: 0 5px 0 var(--royal-purple);
 }
 
+/* Tools Grid */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-smooth);
+    cursor: default;
+}
+
+.tool-item i {
+    font-size: 2rem;
+    background: var(--gradient-90s);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: var(--transition-smooth);
+}
+
+.tool-item span {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.tool-item:hover {
+    border-color: var(--electric-blue);
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.tool-item:hover i {
+    transform: scale(1.2);
+}
+
+.tool-item:hover span {
+    color: var(--electric-blue);
+}
+
 /* ===========================================
    WHAT I DO / SERVICES SECTION
    =========================================== */
@@ -1213,6 +1268,19 @@ footer h3 .accent {
         text-align: center;
     }
 
+    .tools-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.75rem;
+    }
+
+    .tool-item {
+        padding: 1rem 0.5rem;
+    }
+
+    .tool-item i {
+        font-size: 1.75rem;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1322,6 +1390,23 @@ footer h3 .accent {
     .skill-items {
         font-size: 0.75rem;
         padding: 0.4rem 1rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .tool-item {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .tool-item i {
+        font-size: 1.5rem;
+    }
+
+    .tool-item span {
+        font-size: 0.6rem;
     }
 
     .project-description {
