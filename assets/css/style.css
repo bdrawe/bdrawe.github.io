@@ -545,8 +545,9 @@ nav.navbar::after {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    padding: 0 2rem;
 }
 
 /* Make the last row center the cards */
@@ -557,13 +558,14 @@ nav.navbar::after {
 
 /* Service Card */
 .service-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 2px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 0, 255, 0.3);
     border-radius: var(--border-radius-lg);
     padding: 2.5rem;
     position: relative;
     transition: var(--transition-smooth);
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .service-card::before {
@@ -582,8 +584,8 @@ nav.navbar::after {
 .service-card:hover {
     border-color: var(--neon-pink);
     transform: translateY(-8px);
-    box-shadow: var(--shadow-neon);
-    background: rgba(255, 0, 255, 0.05);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2);
+    background: rgba(255, 0, 255, 0.1);
 }
 
 .service-card:hover::before {
