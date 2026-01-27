@@ -492,8 +492,8 @@ nav.navbar::after {
 
 /* Tools Grid */
 .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -1269,7 +1269,7 @@ footer h3 .accent {
     }
 
     .tools-grid {
-        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
         gap: 0.75rem;
     }
 
@@ -1393,7 +1393,7 @@ footer h3 .accent {
     }
 
     .tools-grid {
-        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
         gap: 0.5rem;
     }
 
