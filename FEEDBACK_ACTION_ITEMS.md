@@ -6,7 +6,7 @@ Action items extracted from friend's feedback on portfolio site.
 
 ## Issue 1: Add benefit-oriented subtitle/tagline in hero section
 
-**Status:** TODO
+**Status:** DONE
 
 **Feedback:**
 > "Add somewhere underneath 'technical growth consultant' like a.k.a. I do this for you... what's your little tagline so people are like, okay, this is how you can help me."
@@ -21,7 +21,7 @@ Action items extracted from friend's feedback on portfolio site.
 
 ## Issue 2: Make Services section headline benefit-oriented
 
-**Status:** TODO
+**Status:** DONE
 
 **Feedback:**
 > "I would actually just change this headline to be more benefit oriented for the reader."
@@ -36,7 +36,7 @@ Action items extracted from friend's feedback on portfolio site.
 
 ## Issue 3: Rewrite services copy to be client-focused instead of "I"-focused
 
-**Status:** TODO
+**Status:** DONE
 
 **Feedback:**
 > "Tweak some of this copy where you say 'I use' or 'I this'... make them the hero."

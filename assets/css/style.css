@@ -273,8 +273,18 @@ nav.navbar::after {
     font-family: var(--font-mono);
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: var(--electric-blue);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     letter-spacing: 2px;
+}
+
+.hero .hero-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero .cta-buttons {
