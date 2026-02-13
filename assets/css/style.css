@@ -1862,66 +1862,6 @@ footer h3 .accent {
         padding: 0.85rem 1rem;
         font-size: 0.95rem;
     }
-
-    .process-step {
-        gap: 1.25rem;
-        padding: 1.25rem;
-    }
-
-    .step-number {
-        font-size: 2rem;
-        width: 45px;
-    }
-
-    .step-title {
-        font-size: 1.15rem;
-    }
-
-    .step-description {
-        font-size: 0.9rem;
-    }
-
-    .process-connector {
-        margin-left: 2rem;
-        height: 1.5rem;
-    }
-
-    .engagement-note {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-        padding: 1.5rem;
-    }
-
-    .process-step {
-        gap: 1.25rem;
-        padding: 1.25rem;
-    }
-
-    .step-number {
-        font-size: 2rem;
-        width: 45px;
-    }
-
-    .step-title {
-        font-size: 1.15rem;
-    }
-
-    .step-description {
-        font-size: 0.9rem;
-    }
-
-    .process-connector {
-        margin-left: 2rem;
-        height: 1.5rem;
-    }
-
-    .engagement-note {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-        padding: 1.5rem;
-    }
 }
 
 @media screen and (max-width: 576px) {
