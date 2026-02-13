@@ -1004,6 +1004,181 @@ nav.navbar::after {
 }
 
 /* ===========================================
+   HOW I WORK / PROCESS SECTION
+   =========================================== */
+#how-i-work {
+    padding: var(--space-xl) var(--space-md);
+    background: var(--soft-black);
+    position: relative;
+    overflow: hidden;
+}
+
+#how-i-work::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: var(--hot-orange);
+    opacity: 0.08;
+    border-radius: 50%;
+    left: -150px;
+    top: 30%;
+    filter: blur(100px);
+}
+
+#how-i-work::after {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--lime-green);
+    opacity: 0.06;
+    border-radius: 50%;
+    right: -100px;
+    bottom: 20%;
+    filter: blur(80px);
+}
+
+.process-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.process-header .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.process-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition-smooth);
+    position: relative;
+}
+
+.process-step:hover {
+    border-color: var(--neon-pink);
+    background: rgba(255, 0, 255, 0.05);
+    transform: translateX(8px);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
+}
+
+.step-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gradient-90s);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 70px;
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.process-step:hover .step-number {
+    transform: scale(1.15);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-title {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--pure-white);
+    margin-bottom: 0.5rem;
+    transition: var(--transition-smooth);
+}
+
+.process-step:hover .step-title {
+    color: var(--electric-blue);
+}
+
+.step-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.process-connector {
+    width: 3px;
+    height: 2rem;
+    background: var(--gradient-90s);
+    margin-left: 3.2rem;
+    opacity: 0.4;
+    border-radius: 2px;
+}
+
+.engagement-note {
+    margin-top: var(--space-lg);
+    padding: 2rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid rgba(0, 255, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: var(--transition-smooth);
+}
+
+.engagement-note:hover {
+    border-color: var(--electric-blue);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+.note-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid var(--electric-blue);
+    border-radius: var(--border-radius-sm);
+}
+
+.note-icon i {
+    font-size: 1.25rem;
+    color: var(--electric-blue);
+}
+
+.engagement-note p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+
+.engagement-note strong {
+    color: var(--electric-blue);
+}
+
+/* ===========================================
    FOOTER / CONTACT SECTION - Retro Terminal Style
    =========================================== */
 footer {
@@ -1425,6 +1600,20 @@ footer h3 .accent {
     .service-card {
         padding: 2rem;
     }
+
+    .process-step {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .step-number {
+        font-size: 2.5rem;
+        width: 55px;
+    }
+
+    .process-connector {
+        margin-left: 2.6rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1491,6 +1680,36 @@ footer h3 .accent {
     #contact-form textarea {
         padding: 0.85rem 1rem;
         font-size: 0.95rem;
+    }
+
+    .process-step {
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    .step-number {
+        font-size: 2rem;
+        width: 45px;
+    }
+
+    .step-title {
+        font-size: 1.15rem;
+    }
+
+    .step-description {
+        font-size: 0.9rem;
+    }
+
+    .process-connector {
+        margin-left: 2rem;
+        height: 1.5rem;
+    }
+
+    .engagement-note {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
     }
 }
 
@@ -1583,6 +1802,19 @@ footer h3 .accent {
 
     .outcome-text {
         font-size: 0.85rem;
+    }
+
+    .step-number {
+        font-size: 1.75rem;
+        width: 40px;
+    }
+
+    .step-title {
+        font-size: 1.1rem;
+    }
+
+    .process-connector {
+        margin-left: 1.75rem;
     }
 }
 
